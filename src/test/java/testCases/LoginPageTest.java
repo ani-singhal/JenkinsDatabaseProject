@@ -25,11 +25,15 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=1)
 	public void logintest() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
 		loginpageObj.enterUserName("demo@techfios.com");
+		Thread.sleep(5000);
+
 		loginpageObj.enterPassword("abc123");
+		Thread.sleep(5000);
+
 //		loginpageObj.enterUserName(DataBasePage.getData("username"));
 //		loginpageObj.enterPassword(DataBasePage.getData("password"));
 		loginpageObj.clickSignInButton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		takeScreenshotAtEndOfTest(driver);
 		
@@ -42,7 +46,7 @@ public class LoginPageTest extends TestBase{
 //		loginpageObj.enterUserName(DataBasePage.getData("username"));
 //		loginpageObj.enterPassword(DataBasePage.getData("password"));
 		loginpageObj.clickSignInButton();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		
 		 String expectedTitle="Dashboard- iBilling";
 		  String actualTitle=loginpageObj.getPageTitle();
